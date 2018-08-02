@@ -28,7 +28,6 @@ func KeyPair(keyFile string) (ssh.AuthMethod, error) {
 // SSHAgent get the SSH agent
 func SSHAgent() (ssh.AuthMethod, error) {
 	agentSock, err := net.Dial("unix", os.Getenv("SSH_AUTH_SOCK"))
-	// /private/tmp/com.apple.launchd.XBPm2ng1pp/Listeners
 	if err != nil {
 		return nil, err
 	}
